@@ -1,9 +1,9 @@
 # vmware-vcloud-director-scripts
-## Pre requisites
+## Pre requisites::
 - Powershell 5.1 or higher;
 - VMWare.PowerCLI module (https://www.altaro.com/vmware/install-powercli-powershellget/)
 
-Scripts::
+## Scripts::
 - [x] login-to-vcloud.ps1
 - [x] get-vapp.ps1
 - [x] clone-vapp.ps1

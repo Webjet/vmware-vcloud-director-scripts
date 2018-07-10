@@ -81,7 +81,7 @@ Try {
 	$vmCustomization.AdminPasswordEnabled = $true
 	$vmCustomization.AdminPasswordAuto = $true
 	$vmCustomization.CustomizationScript  = $customizationScript
-	$vmCustomization.ComputerName = $vappNameNew
+	$vmCustomization.ComputerName = $vmnamenew
 	$vmCustomization.any = $null
 	$vmCustomization.updateserverdata() | Out-Null
 } Catch {
@@ -92,7 +92,7 @@ Try {
 
 # VM Name Change:
 Try {
-	write-host "Setting VM Name to $($vappNameNew)"
+	write-host "Setting VM Name to $($vmnamenew)"
 	$vm[0].extensiondata.name = $vmnamenew
 	$vm[0].extensiondata.updateserverdata() | Out-Null
 } Catch {

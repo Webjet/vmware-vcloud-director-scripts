@@ -1,9 +1,9 @@
 # Declare login credentials
-$ciServer = '' #'vcloud.macquarieview.com'
+$global:ciServer = 'vcloud.macquarieview.com'
 $apiusername = ''
 $apipassword = ''
-$orgName = '' #'Webjet_Marketing_Pty_Ltd_42809_SVC'
-$orgVdc = '' #'name-of-vdc'
+$global:orgName = 'Webjet_Marketing_Pty_Ltd_42809_SVC'
+$global:orgVdc = 'M2SVC20637001' #'name-of-vdc'
 
 #Getting login details
 if (!$apiusername) {
@@ -27,11 +27,11 @@ Try {
 Try {
     write-host "Getting OrgVdc name..."
     if (!$orgVdc) {
-        #write-host "$orgVdc not defined"
-        $orgVdc = Get-orgVdc -Org $(get-org)
-        write-host "OrgVdc set to $orgVdc"
-    }
+         $orgVdc = Get-orgVdc -Org $(get-org)
+}
 } Catch {
 	Write-Host "$($Error[0].ToString()) Line Number: $($Error[0].InvocationInfo.ScriptLineNumber)"
 	Exit(1)
+} Finally {
+        write-host "OrgVdc set to $($orgVdc)"
 }

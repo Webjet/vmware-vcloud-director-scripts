@@ -11,3 +11,6 @@
 - [ ] new-vapp.ps1 (in progress)
 - [ ] join-domain.ps1 (in progress)
 - [ ] new-vm-from-scratch.ps1 (not started)
+
+## How to use::
+- Download the scripts to local and update variables as necessary.

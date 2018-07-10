@@ -1,19 +1,19 @@
-# Declare login credentials
+##Declare login credentials
 $global:ciServer = 'vcloud.macquarieview.com'
-$apiusername = ''
+$global:apiusername = ''
 $apipassword = ''
 $global:orgName = 'Webjet_Marketing_Pty_Ltd_42809_SVC'
 $global:orgVdc = 'M2SVC20637001' #'name-of-vdc'
 
 #Getting login details
-if (!$apiusername) {
-	$apiusername = read-host "Enter username: "
+if (!$global:apiusername) {
+	$global:apiusername = read-host "Enter username: "
 }
 if (!$apipassword) {
 	$apipassword = read-host "Enter password: "  -asSecureString
 }
 
-#Connecting to the CI Server
+##Connecting to the CI Server
 Try {
     Connect-CIServer -Server $ciServer -User $apiusername -Password $([Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($apipassword))) -Org $orgName | Out-Null
 } Catch {
@@ -23,7 +23,8 @@ Try {
 	Write-Output "Successfully logged into $($ciServer)"
 }
 
-#Get VDC Name:
+##Get VDC Name:
+###Assumption is there is only one VDC
 Try {
     write-host "Getting OrgVdc name..."
     if (!$orgVdc) {

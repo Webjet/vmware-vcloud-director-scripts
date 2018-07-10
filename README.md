@@ -11,6 +11,10 @@
 - [ ] new-vapp.ps1 (in progress)
 - [ ] join-domain.ps1 (in progress)
 - [ ] new-vm-from-scratch.ps1 (not started)
+- [ ] vapp-template-from-vapp (not started)
 
 ## How to use::
 - Download the scripts to local and update variables as necessary.
+
+## Reference docs::
+- [vmware vsphere 5.1 documentation center](https://pubs.vmware.com/vsphere-51/index.jsp#com.vmware.powercli.cmdletref.doc/Get-CIVApp.html)

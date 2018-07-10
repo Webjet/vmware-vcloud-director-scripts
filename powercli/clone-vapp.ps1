@@ -1,12 +1,13 @@
 #Clone Vapp
 $vappNameNew = 'WJ-DEV-NODE03'
 $vappNameOrig = 'WJ-DEV-NODE01'
+$vmnamenew = 'WJ-DEV-VM03'
 
 #Domain and Customisation Script Variables:
 $joinDomain = $true
 $joinDomainName = "wjhack.local"
 $joinDomainUserName = "Administrator"
-$joinDomainUserPassword = "*******"
+$joinDomainUserPassword = "******"
 $joinMachineObjectOU = "OU=Servers,DC=wjhack,DC=local" # CN=Computers is not an OU
 
 #VM Network variables
@@ -91,7 +92,7 @@ Try {
 # VM Name Change:
 Try {
 	write-host "Setting VM Name to $($vappNameNew)"
-	$vm[0].extensiondata.name = $vappNameNew
+	$vm[0].extensiondata.name = $vmnamenew
 	$vm[0].extensiondata.updateserverdata() | Out-Null
 } Catch {
 	Write-Host "$($Error[0].ToString()) Line Number: $($Error[0].InvocationInfo.ScriptLineNumber)"

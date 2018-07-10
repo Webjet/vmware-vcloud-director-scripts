@@ -12,6 +12,7 @@ $joinMachineObjectOU = "OU=Servers,DC=wjhack,DC=local" # CN=Computers is not an 
 
 #VM Network variables
 $vappIp = '172.28.85.36'
+$orgVdcNetworkName = 'V2777-DEV1-M2VLN20637001'
 
 # Clone Operation:
 Try {

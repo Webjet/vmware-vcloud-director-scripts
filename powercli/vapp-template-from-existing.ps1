@@ -47,7 +47,7 @@ if (!$newvapptemplate) {
    
 Try {
     Write-Host "Creating new vapp template $($newvapptemplate) from $($sourcevapp)"
-    New-CIVAppTemplate -Name $newvapptemplate -VApp $sourceVapp -OrgVdc $orgVdc -Catalog $catalog
+    New-CIVAppTemplate -Name $newvapptemplate -VApp $sourceVapp -OrgVdc $orgVdc -Catalog $catalog | Out-Null
 } Catch {
     Write-Host "$($Error[0].ToString()) Line Number: $($Error[0].InvocationInfo.ScriptLineNumber)"
     Exit(1)

@@ -11,7 +11,7 @@
 - [ ] new-vapp.ps1 (in progress)
 - [ ] join-domain.ps1 (in progress)
 - [ ] new-vm-from-scratch.ps1 (not started)
-- [ ] vapp-template-from-vapp (not started)
+- [x] vapp-template-from-existing
 
 ## How to use::
 - Download the scripts to local and update variables as necessary.
